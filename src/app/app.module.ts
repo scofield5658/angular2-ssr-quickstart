@@ -6,9 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { zh_CN, NZ_I18N, NzI18nModule } from 'ng-zorro-antd/i18n';
 
-import { UIRouterModule } from "@uirouter/angular";
-import { uiRouterConfigFn } from "./config/router.config";
-import stateArray from "./config/states";
+import { AppRoutingModule } from './app-routing.module';
 
 import { counterReducer } from './reducers/counter';
 
@@ -40,11 +38,7 @@ const INIT_COMPONENTS = [
     NzI18nModule,
     NoopAnimationsModule,
     HttpClientModule,
-    UIRouterModule.forRoot({
-      states: stateArray,
-      useHash: true,
-      config: uiRouterConfigFn
-    }),
+    AppRoutingModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },

@@ -4,8 +4,8 @@
   <div class="people">
     <h3>Some people:</h3>
     <ul>
-      <li *ngFor="let person of people">
-        <a uiSref=".person" [uiParams]="{ personId: person.id }" uiSrefActive="active">
+      <li *ngFor="let person of people$ | async">
+        <a [routerLink]="['/people', person.id]" routerLinkActive="active">
           {{ person.name }}
         </a>
       </li>
@@ -13,5 +13,5 @@
   </div>
 
   <!-- viewport for child view -->
-  <ui-view></ui-view>
+  <router-outlet></router-outlet>
 </div>
