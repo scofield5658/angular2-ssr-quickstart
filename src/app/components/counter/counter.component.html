@@ -1,0 +1,11 @@
+<div class="counter-text">Current Count: {{ count$ | async }}</div>
+<div class="counter-btns">
+  <button id="increment" (click)="increment()">Increment</button>
+  <button id="decrement" (click)="decrement()">Decrement</button>
+  <button id="reset" (click)="reset()">Reset Counter</button>
+</div>
+
+<div class="counter-specify">
+  <input type="number" #count>
+  <button id="specify" (click)="specify(count.value)">Specify</button>
+</div>

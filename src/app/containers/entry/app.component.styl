@@ -1,0 +1,47 @@
+/* Add application styles & imports to this file! */
+a + a
+  margin-left .5em
+
+body
+  font-family Arial, helvetica, sans-serif
+
+.active
+  color red
+  font-weight bold
+
+.flex-h
+  display flex
+  flex-flow row nowrap
+  align-items flex-start
+
+.debug-ui-sref [uisref]:after
+  content ' uiSref="' attr(uisref) '"'
+  font-family monospace
+
+.debug-ui-sref [uisref]
+  padding 0 0.25em
+
+.debug-ui-view ui-view
+  padding 0 1em 1em 1em
+  display block
+  border 5px solid darkgrey
+
+.debug-ui-view ui-view ui-view
+  margin 1em
+
+.debug-ui-view ui-view:before
+  content "<ui-view>"
+  display block
+  width 100%
+  font-size 1em
+  font-weight bold
+  text-align center
+  background-color darkgrey
+  margin 0 -1em
+  padding 0 1em
+
+.debug-ui-view:empty:after
+  display block
+  width 100%
+  text-align center
+  content "No view is loaded into this ui-view"
