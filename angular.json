@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-server-quickstart": {
+    "angular2-ssr-quickstart": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-server-quickstart:build"
+            "browserTarget": "angular2-ssr-quickstart:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-server-quickstart:build:production"
+              "browserTarget": "angular2-ssr-quickstart:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-server-quickstart:build"
+            "browserTarget": "angular2-ssr-quickstart:build"
           }
         },
         "test": {
@@ -125,7 +125,7 @@
         }
       }
     },
-    "angular-server-quickstart-e2e": {
+    "angular2-ssr-quickstart-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,11 +134,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-server-quickstart:serve"
+            "devServerTarget": "angular2-ssr-quickstart:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-server-quickstart:serve:production"
+              "devServerTarget": "angular2-ssr-quickstart:serve:production"
             }
           }
         },
@@ -154,5 +154,5 @@
       }
     }
   },
-  "defaultProject": "angular-server-quickstart"
+  "defaultProject": "angular2-ssr-quickstart"
 }

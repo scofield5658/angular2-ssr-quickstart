@@ -6,7 +6,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 })
 export class EchoService {
   constructor(@Inject(HttpClient) public http: HttpClient) {
-    console.log("PeopleService constructor");
+    console.log("EchoService constructor");
   }
 
   getEchoResponse(text: string) {
