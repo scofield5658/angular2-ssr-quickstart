@@ -20,8 +20,11 @@ import 'zone.js/dist/zone-node';
 import * as express from 'express';
 import { join } from 'path';
 
+import router from './src/server/router';
+
 // Express server
 const app = express();
+app.use('/api', router);
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
@@ -44,7 +47,7 @@ app.set('views', DIST_FOLDER);
 // app.get('/api/**', (req, res) => { });
 // Serve static files from /browser
 app.get('*.*', express.static(DIST_FOLDER, {
-  maxAge: '1y'
+  maxAge: '6h'
 }));
 
 // All regular routes use the Universal engine

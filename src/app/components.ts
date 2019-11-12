@@ -6,6 +6,7 @@ import { PeopleComponent } from "./containers/people/people.component";
 import { PersonComponent } from "./containers/person/person.component";
 
 import { CounterComponent } from './components/counter/counter.component';
+import { EchoComponent } from './components/echo/echo.component';
 
 export const INIT_COMPONENTS = [
   // entry
@@ -19,4 +20,5 @@ export const INIT_COMPONENTS = [
 
   // components
   CounterComponent,
+  EchoComponent,
 ];

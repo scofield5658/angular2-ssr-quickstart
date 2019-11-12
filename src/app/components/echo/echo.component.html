@@ -1,0 +1,9 @@
+<div class="echo-container">
+  <input type="text" #text>
+  <button id="echo" (click)="sendEcho(text.value)">Echo!</button>
+</div>
+<div class="echo-result" *ngIf="response$ | async as response">
+  <div>ErrCode: {{ response.err_code }}</div>
+  <div>ErrDesc: {{ response.err_desc }}</div>
+  <div>Data: {{ response.data | json }}</div>
+</div>
